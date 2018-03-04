@@ -21,6 +21,7 @@
             border:4px solid blue;
             background: white;
             text-align:center;
+            top:200px;
         }
         #heading{
             font-style:italic;
@@ -72,10 +73,41 @@
         #info .left, #info .center{
             padding-right:50px
         }
+        #banner{
+            background-color:red;
+            text-align: center;
+            width:100%;
+            padding: 0.5% 0;
+            margin: 0;
+            margin-bottom: 10px;
+            top:0px;
+        }
+        #email{
+             font-family: Arial, Helvetica, sans-serif;
+        }
+        #close{
+            margin:0;
+            padding: 0;
+            font-size: 0.9em;
+            color:blue;
+            text-decoration: underline;
+        }
+        #close:hover{
+            cursor: pointer;
+            color:purple;
 
+        }
+        #p{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     </style>
 </head>
 <body>
+<div id="banner">
+    <p id="p">THIS IS A SHELL WEBSITE, AND IS NOT COMPLETE. IF YOU WOULD LIKE TO CONTRIBUTE, PLEASE EMAIL <a id="email" href="mailto:nachos.underwood@gmail.com">nachos.underwood@gmail.com</a></p>
+    <span id="close"><a>dismiss</a></span>
+</div>
 <div id="main">
     <h1 id="heading">LIBERTY CLUB</h1>
     <h1 id="scales">⚖</h1>
@@ -113,5 +145,13 @@
     </table>
     <p>Or come find us at C205 every Friday</p>
 </div>
+<script>
+    var close = document.getElementById("close");
+    var div = document.getElementById("banner");
+    close.addEventListener("click", function(){
+        div.style.display = "none";
+        console.log(div.style.display);
+    });
+</script>
 </body>
 </html>
